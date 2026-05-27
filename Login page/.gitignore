@@ -1,0 +1,33 @@
+﻿# Ignore build output
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Ignore Rider & VS Code
+.idea/
+.vscode/
+
+# Ignore Visual Studio folders
+.vs/
+*.user
+*.suo
+
+# Ignore EF Core tools
+*.db
+*.db-shm
+*.db-wal
+
+# Ignore design-time caches
+**/CopilotIndices/
+**/DesignTimeBuild/
+**/FileContentIndex/
+*.v2
+
+# Logs
+*.log
+
+# Other
+*.DS_Store
+Thumbs.db

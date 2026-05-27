@@ -1,0 +1,196 @@
+﻿/* Custom styles from the original HTML */
+.rc-anchor-normal {
+    height: 74px;
+    width: 83%;
+}
+
+.nav-link:hover {
+    color: blue; /* Change the background color to blue on hover */
+}
+
+#loginSection {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(0); /* Fully visible */
+    opacity: 1;
+    z-index: 2;
+}
+
+#quickPaySection {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%); /* Initially hidden off-screen */
+    opacity: 0;
+    z-index: 1;
+}
+
+/* When the Quick Pay section becomes visible */
+.showQuickPay #quickPaySection {
+    transform: translateX(0); /* Bring Quick Pay into view */
+    opacity: 1;
+    z-index: 2;
+}
+
+.showQuickPay #loginSection {
+    transform: translateX(100%); /* Move Login out of view */
+    opacity: 0;
+    z-index: 1;
+}
+
+#quickPayButton .amount-suggestion {
+    margin: 20px;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes moveToTop {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-80px); /* Adjust this value as per your layout */
+    }
+}
+
+/* Animation for moving the search button to the bottom */
+@keyframes moveToBottom {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(80px); /* Adjust this value as per your layout */
+    }
+}
+
+/* Initial styles for input, button, and hidden details */
+#consumerDetails {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.showDetails #consumerDetails {
+    opacity: 1;
+    transform: translateY(0); /* Move to its final position */
+}
+
+#clearButton, #payButton {
+    opacity: 0;
+    transform: translateY(20px); /* Initially out of place */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#buttonContainer .showClearButton #clearButton #payButton {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add some spacing between buttons */
+}
+
+#consumerNumberContainer,
+#searchButton {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.move-up {
+    transform: translateY(-10px); /* Moves up */
+}
+
+.move-down {
+    transform: translateY(20px); /* Moves down */
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.corner-image {
+    position: absolute;
+    width: 150px; /* Set the width of the corner images */
+    height: auto;
+    margin-top: 30px;
+}
+
+.left-image {
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left corner */
+}
+
+.right-image {
+    bottom: 0; /* Position at the bottom */
+    right: 0; /* Align to the right corner */
+}
+
+.vertical-line {
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    left: 48%;
+    background-color: rgba(0, 0, 0, 0.1); /* Set opacity */
+    margin-left: -1px; /* Adjust position if needed */
+}
+
+.custom-refresh-button {
+    margin-left: 10px; /* Your desired styles here */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Styles applied directly in HTML that should ideally be in CSS */
+.text-primary {
+    color: #007bff !important;
+}
+/* Example, adjust to your theme's primary color */
+.f-18 {
+    font-size: 18px;
+}
+
+.home-cards {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+/* Replaced box-shadow from inline style */

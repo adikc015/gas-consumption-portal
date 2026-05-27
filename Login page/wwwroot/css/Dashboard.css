@@ -1,0 +1,180 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f6f8fa;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: visible;
+}
+
+.nav-left {
+    font-weight: bold;
+    font-size: 1.3rem;
+    overflow: visible;
+}
+
+.nav-center {
+    display: flex;
+    gap: 2rem;
+    overflow: visible;
+}
+
+    .nav-center a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+
+.nav-right {
+    font-size: 1.2rem;
+    overflow: visible;
+}
+
+.welcome {
+    margin: 2rem;
+    font-size: 1.2rem;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem 2rem 2rem;
+    justify-content: space-between;
+}
+
+.card.blue {
+    background: linear-gradient(to bottom right, #0066cc, #003366);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 0 0 35%;
+    min-width: 320px;
+}
+
+    .card.blue .circle {
+        width: 150px;
+        height: 150px;
+        border: 5px solid white;
+        border-radius: 50%;
+        text-align: center;
+        margin: 2rem auto;
+        padding-top: 35px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .card.blue .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .card.blue button {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.8rem;
+        background: white;
+        color: #003366;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+.card.gas {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+    .card.gas h4 {
+        margin-bottom: 0.5rem;
+    }
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+    .filters input,
+    .filters select {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+.no-data {
+    color: #888;
+    font-style: italic;
+}
+
+.top-nav {
+    max-width: 100%;
+    overflow-x: visible;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.custom-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+    width: 220px;
+}
+
+    .custom-dropdown ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .custom-dropdown ul li {
+            margin: 5px 0;
+        }
+
+            .custom-dropdown ul li a {
+                text-decoration: none;
+                color: #333;
+                padding: 8px;
+                display: block;
+                border-radius: 5px;
+            }
+
+                .custom-dropdown ul li a:hover {
+                    background-color: #f0f0f0;
+                }
